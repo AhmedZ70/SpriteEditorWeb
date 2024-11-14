@@ -346,6 +346,7 @@ DIST          = /Users/6.8.0/wasm_multithread/mkspecs/features/spec_pre.prf \
 		/Users/6.8.0/wasm_multithread/mkspecs/common/wasm/wasm.conf \
 		/Users/6.8.0/wasm_multithread/mkspecs/wasm-emscripten/qmake.conf \
 		/Users/6.8.0/wasm_multithread/mkspecs/features/spec_post.prf \
+		../../.qmake.stash \
 		/Users/6.8.0/wasm_multithread/mkspecs/features/exclusive_builds.prf \
 		/Users/6.8.0/wasm_multithread/mkspecs/features/toolchain.prf \
 		/Users/6.8.0/wasm_multithread/mkspecs/features/default_pre.prf \
@@ -670,6 +671,7 @@ Makefile: ../../SpriteEditorWeb.pro ../../../6.8.0/wasm_multithread/mkspecs/feat
 		../../../6.8.0/wasm_multithread/mkspecs/common/wasm/wasm.conf \
 		../../../6.8.0/wasm_multithread/mkspecs/wasm-emscripten/qmake.conf \
 		../../../6.8.0/wasm_multithread/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../6.8.0/wasm_multithread/mkspecs/features/exclusive_builds.prf \
 		../../../6.8.0/wasm_multithread/mkspecs/features/toolchain.prf \
 		../../../6.8.0/wasm_multithread/mkspecs/features/default_pre.prf \
@@ -996,6 +998,7 @@ Makefile: ../../SpriteEditorWeb.pro ../../../6.8.0/wasm_multithread/mkspecs/feat
 ../../../6.8.0/wasm_multithread/mkspecs/common/wasm/wasm.conf:
 ../../../6.8.0/wasm_multithread/mkspecs/wasm-emscripten/qmake.conf:
 ../../../6.8.0/wasm_multithread/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../6.8.0/wasm_multithread/mkspecs/features/exclusive_builds.prf:
 ../../../6.8.0/wasm_multithread/mkspecs/features/toolchain.prf:
 ../../../6.8.0/wasm_multithread/mkspecs/features/default_pre.prf:
@@ -1730,7 +1733,7 @@ uninstall_target: FORCE
 
 install_js_file: first FORCE
 	@test -d $(INSTALL_ROOT)/opt/SpriteEditorWeb/bin || mkdir -p $(INSTALL_ROOT)/opt/SpriteEditorWeb/bin
-	$(QINSTALL_PROGRAM) /Users/ahmedzahran/Qt/SpriteEditorWeb/SpriteEditorWeb.js $(INSTALL_ROOT)/opt/SpriteEditorWeb/bin/SpriteEditorWeb.js
+	$(QINSTALL) /Users/ahmedzahran/Qt/SpriteEditorWeb/build/WebAssembly_Qt_6_8_0_multi_threaded-Debug/SpriteEditorWeb.js $(INSTALL_ROOT)/opt/SpriteEditorWeb/bin/SpriteEditorWeb.js
 
 uninstall_js_file: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/opt/SpriteEditorWeb/bin/SpriteEditorWeb.js
